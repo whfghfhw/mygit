@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 开发模式 -->
+	<constant name="struts.devMode" value="true" />
+	<!-- 当修改配置文件不需要重启服务，开发比较有用 -->
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<!-- 中文编码 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!-- 通配符使用方式 -->
+	<package name="pwd" extends="json-default" namespace="/ztree/pwd">
+		<action name="*_*" class="com.hardy.app.pwd.action.{1}" method="{2}">
+			<result type="json">
+				<!-- 此乃BaseAction中定义的公共json，指定为json -->
+				<param name="root">json</param>
+			</result>
+		</action>
+	</package>
+</struts>    
