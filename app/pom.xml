@@ -10,7 +10,22 @@
 		<unitils.version>3.1</unitils.version>
 	</properties>
 
+	<repository>
+		<id>opensesame</id>
+		<name>Alibaba OpenSource Repsoitory</name>
+		<url>http://code.alibabatech.com/mvn/releases/</url>
+		<snapshots>
+			<enabled>false</enabled>
+		</snapshots>
+	</repository>
+
 	<dependencies>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.1.40</version>
+		</dependency>
+
 		<dependency>
 			<groupId>xalan</groupId>
 			<artifactId>xalan</artifactId>
@@ -36,6 +51,11 @@
 		<dependency>
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-convention-plugin</artifactId>
+			<version>2.3.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-json-plugin</artifactId>
 			<version>2.3.8</version>
 		</dependency>
 		<dependency>
